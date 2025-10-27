@@ -1,0 +1,131 @@
+/* ===================================================================================
+// style.css
+// -----------------------------------------------------------------------------------
+// This file contains all custom styles for the application, complementing
+// the utility-first approach of TailwindCSS.
+// =================================================================================== */
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #f0f4f8;
+    /* A lighter, cleaner blue-gray */
+}
+
+.tab-active {
+    background-color: #ffffff;
+    color: #0891b2;
+    /* cyan-600 */
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.75rem;
+    /* 12px */
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    border: 1px solid #e2e8f0;
+    /* slate-200 */
+}
+
+.info-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07);
+}
+
+.chart-container {
+    position: relative;
+    height: 350px;
+    width: 100%;
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+.toast {
+    animation: fadeInOut 3s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* Toggle switch for summary view */
+.toggle-label {
+    transition: background-color .2s ease-in-out;
+}
+
+.toggle-radio:checked+.toggle-label {
+    background-color: #0e7490;
+    /* cyan-700 */
+    color: white;
+}
+
+/* Loading Spinner */
+.loader {
+    border: 5px solid #f3f3f3;
+    /* Light grey */
+    border-top: 5px solid #0891b2;
+    /* cyan-600 */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+.loader-small {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #0891b2;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

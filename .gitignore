@@ -1,0 +1,26 @@
+# --- Frontend / Node ---
+**/node_modules/
+**/dist/
+**/build/
+**/.cache/
+**/.turbo/
+**/*.log
+
+# --- Python / Backend ---
+.venv/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Environment & Secrets ---
+.env
+.env.*
+!*.example        # อนุญาตไฟล์ตัวอย่าง env
+
+# --- Database / Generated data ---
+backend/db/*.sqlite*
+*.db
+coverage/
+.DS_Store
