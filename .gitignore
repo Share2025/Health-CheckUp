@@ -20,7 +20,7 @@
 !*.example        # อนุญาตไฟล์ตัวอย่าง env
 
 # --- Database / Generated data ---
-backend/db/*.sqlite*
+[Bb]ackend/db/*.sqlite*
 *.db
 coverage/
 .DS_Store
